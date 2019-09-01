@@ -1,0 +1,54 @@
+.l-body{
+    /* background: linear-gradient( #cf4e8f, #084fc6); */
+    background-image: url(../../../assets/school-bg.jpg);
+    background-size: cover;
+    text-align: center;
+    width:100%;
+    height: -webkit-fill-available;
+}
+.login-card{
+    box-shadow: 0px 0px 50px 2px #a98528;
+    margin: 75px 20px;
+    padding: 12px 18px;
+    background: #000000a1
+}
+.login-card .logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+input {
+    border: none;
+    background: #eee0;
+    width: 100%;
+    border-bottom: 1px solid #ffffff69;
+    margin: 10px 0px;
+    padding: 10px;
+    color: #fff;
+}
+input:focus{
+    outline: 0;
+}
+.warn{
+    color: #e34b3b;
+    font-size: 13px;
+}
+.login-btn{
+    border: none;
+    background: #007fda;
+    color: #fff;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    font-size: 18px;
+    margin: 12px 0px;
+}
+.note h4{
+    font-size: 13px;
+    color:#fff;
+}
+.note p{
+    font-size: 13px;
+    margin: 0px;
+    color: #828282;
+}

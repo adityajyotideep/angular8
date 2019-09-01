@@ -1,1 +1,110 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+.w3-teal{
+    background: #2396e0!important;
+    color: #fff;
+}
+.top-bar{
+    background: #2396e0;
+    padding: 10px 20px;
+}
+.edit-button{
+    float: right;
+    background: #36b900;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+}
+.back-button{
+    float: right;
+    background: #36b900;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    margin: 0px 5px;
+}
+.w3-input{
+    padding: 10px 20px;
+    width: 100%;
+    display: block;
+    border: none;
+    background: #eee;
+}
+.card-custom {
+    margin: 20px;
+    box-shadow: 0px 0px 10px 0px #eee;
+    padding: 35px;
+}
+.s-button{
+    background: green;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 3px;
+}
+.w3-text-blue{
+    margin-bottom: .5rem;
+    margin: 8px 5px;
+    color: #8e8e8e;
+}
+.w3-text-blue i{
+    margin-right: 10px;
+}
+.nav-item{
+    cursor: pointer;
+}
+.nav-item:hover{
+    background: #2396e0!important;
+    color:#fff!important;
+}
+.btn-view{
+    background: navy;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+input:focus{
+    outline: 0;
+}
+.add-button{
+    float: right;
+    background: #36b900;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.search-bar {
+    text-align: center;
+    padding: 15px;
+}
+.search-field{
+    width: 50%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #eaeaea;
+}
+.w3-panel.w3-green {
+    text-align: center;
+    background: #eee;
+}
+.button-update{
+    background: #5cba08;
+    color: #fff;
+    border: none;
+    padding: 5px 18px;
+    border-radius: 5px;
+}
+.button-delete{
+    background: red;
+    color: #fff;
+    border: none;
+    padding: 5px 18px;
+    border-radius: 5px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

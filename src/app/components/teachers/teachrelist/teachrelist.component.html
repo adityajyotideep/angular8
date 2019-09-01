@@ -1,0 +1,134 @@
+
+
+<div class="container-fluid p-0" *ngIf="teacherList">
+	<!-- <div class="top-bar w3-teal">
+		<h3>Teacher List <button routerLink="/teacher_registration" class="add-button"><i class="w3-medium  fa fa-plus"></i> Add New teacher</button></h3>
+	</div> -->
+<mat-tab-group>
+	<mat-tab label="Teacher">
+			<div class='search-bar'>
+					<span><i class="w3-medium fa fa-search"></i> Search : <input class="search-field" type="text" [(ngModel)]='filterData'></span>
+				</div>
+			
+				<div class="w3-panel w3-green" *ngIf="(teacherList | filter:filterData).length == 0">
+					<h3>No teacher found!!</h3>
+					<p>No teacher found <span *ngIf="filterData"> with search "{{filterData}}"</span> </p>
+				</div>
+				<div class="container p-3" *ngIf="(teacherList | filter:filterData | filter:filterData).length != 0">
+					<table class="table">
+						<tr>
+							<th><i class="w3-medium custom-icon fa fa-refresh"></i> Sr. No.</th>
+							<!-- <th>ID</th> -->
+							<th><i class="w3-medium custom-icon fa fa-user"></i> First Name</th>
+							<th><i class="w3-medium custom-icon fa fa-user"></i> Last Name</th>
+							<th><i class="w3-medium custom-icon fa fa-envelope-o"></i> Email</th>
+							<th><i class="w3-medium custom-icon fa fa-phone"></i> Phone</th>
+							<th><i class="w3-medium custom-icon fa fa-envelope-o"></i> Subject</th>
+							<th><i class="w3-medium custom-icon fa fa-phone"></i> Joining Date</th>
+							<th><i class="w3-medium custom-icon fa fa-pencil"></i> Edit</th>
+							<!-- <th><i class="w3-medium custom-icon fa fa-trash"></i> Delete</th> -->
+						</tr>
+						<tr *ngFor="let teacher of teacherList | filter:filterData; index as i;" appHighlightStudent>
+							<td>{{i +1}}</td>
+							<td class="pointer">{{teacher.first_name}} </td>
+							<td class="pointer">{{teacher.last_name}}</td>
+							<td class="pointer">{{teacher.mail}}</td>
+							<td class="pointer">{{teacher.phone}}</td>
+							<td class="pointer">{{teacher.subject}}</td>
+							<td class="pointer">{{teacher.joining_date}}</td>
+							 <td><button [routerLink]="['/teacher_update',teacher.id]" class="button-update">Edit</button></td>
+							 <!-- <td><button (click)="deleteStudent(teacher.id);" class="button-delete">Delete</button></td> -->
+						</tr>
+					</table>
+				</div>
+	</mat-tab>
+	<mat-tab label="Students"> 
+			<div class='search-bar'>
+					<span><i class="w3-medium fa fa-search"></i> Search : <input class="search-field" type="text" [(ngModel)]='filterData'></span>
+				</div>
+			
+				<div class="w3-panel w3-green" *ngIf="(teacherList | filter:filterData).length == 0">
+					<h3>No teacher found!!</h3>
+					<p>No teacher found <span *ngIf="filterData"> with search "{{filterData}}"</span> </p>
+				</div>
+				<div class="container p-3" *ngIf="(teacherList | filter:filterData | filter:filterData).length != 0">
+					<table class="table">
+						<tr>
+							<th><i class="w3-medium custom-icon fa fa-refresh"></i> Sr. No.</th>
+							<!-- <th>ID</th> -->
+							<th><i class="w3-medium custom-icon fa fa-user"></i> First Name</th>
+							<th><i class="w3-medium custom-icon fa fa-user"></i> Last Name</th>
+							<th><i class="w3-medium custom-icon fa fa-envelope-o"></i> Email</th>
+							<th><i class="w3-medium custom-icon fa fa-phone"></i> Phone</th>
+							<th><i class="w3-medium custom-icon fa fa-envelope-o"></i> Subject</th>
+							<th><i class="w3-medium custom-icon fa fa-phone"></i> Joining Date</th>
+							<th><i class="w3-medium custom-icon fa fa-pencil"></i> Edit</th>
+							<!-- <th><i class="w3-medium custom-icon fa fa-trash"></i> Delete</th> -->
+						</tr>
+						<tr *ngFor="let teacher of teacherList | filter:filterData; index as i;" appHighlightStudent>
+							<td>{{i +1}}</td>
+							<td class="pointer">{{teacher.first_name}} </td>
+							<td class="pointer">{{teacher.last_name}}</td>
+							<td class="pointer">{{teacher.mail}}</td>
+							<td class="pointer">{{teacher.phone}}</td>
+							<td class="pointer">{{teacher.subject}}</td>
+							<td class="pointer">{{teacher.joining_date}}</td>
+							 <td><button [routerLink]="['/teacher_update',teacher.id]" class="button-update">Edit</button></td>
+							 <!-- <td><button (click)="deleteStudent(teacher.id);" class="button-delete">Delete</button></td> -->
+						</tr>
+					</table>
+				</div>
+	</mat-tab>
+	<mat-tab label="Others">
+			<div class='search-bar'>
+					<span><i class="w3-medium fa fa-search"></i> Search : <input class="search-field" type="text" [(ngModel)]='filterData'></span>
+				</div>
+			
+				<div class="w3-panel w3-green" *ngIf="(teacherList | filter:filterData).length == 0">
+					<h3>No teacher found!!</h3>
+					<p>No teacher found <span *ngIf="filterData"> with search "{{filterData}}"</span> </p>
+				</div>
+				<div class="container p-3" *ngIf="(teacherList | filter:filterData | filter:filterData).length != 0">
+					<table class="table">
+						<tr>
+							<th><i class="w3-medium custom-icon fa fa-refresh"></i> Sr. No.</th>
+							<!-- <th>ID</th> -->
+							<th><i class="w3-medium custom-icon fa fa-user"></i> First Name</th>
+							<th><i class="w3-medium custom-icon fa fa-user"></i> Last Name</th>
+							<th><i class="w3-medium custom-icon fa fa-envelope-o"></i> Email</th>
+							<th><i class="w3-medium custom-icon fa fa-phone"></i> Phone</th>
+							<th><i class="w3-medium custom-icon fa fa-envelope-o"></i> Subject</th>
+							<th><i class="w3-medium custom-icon fa fa-phone"></i> Joining Date</th>
+							<th><i class="w3-medium custom-icon fa fa-pencil"></i> Edit</th>
+							<!-- <th><i class="w3-medium custom-icon fa fa-trash"></i> Delete</th> -->
+						</tr>
+						<tr *ngFor="let teacher of teacherList | filter:filterData; index as i;" appHighlightStudent>
+							<td>{{i +1}}</td>
+							<td class="pointer">{{teacher.first_name}} </td>
+							<td class="pointer">{{teacher.last_name}}</td>
+							<td class="pointer">{{teacher.mail}}</td>
+							<td class="pointer">{{teacher.phone}}</td>
+							<td class="pointer">{{teacher.subject}}</td>
+							<td class="pointer">{{teacher.joining_date}}</td>
+							 <td><button [routerLink]="['/teacher_update',teacher.id]" class="button-update">Edit</button></td>
+							 <!-- <td><button (click)="deleteStudent(teacher.id);" class="button-delete">Delete</button></td> -->
+						</tr>
+					</table>
+				</div>
+	</mat-tab>
+  </mat-tab-group>
+
+
+
+  <mat-slide-toggle>Slide me!</mat-slide-toggle>
+  <button mat-button>Click me!</button>
+  <mat-spinner></mat-spinner>
+  <mat-menu #appMenu="matMenu">
+  <button mat-menu-item>Settings</button>
+  <button mat-menu-item>Help</button>
+</mat-menu>
+
+<button mat-icon-button [matMenuTriggerFor]="appMenu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+</div>

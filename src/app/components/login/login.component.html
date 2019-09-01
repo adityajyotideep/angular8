@@ -1,0 +1,28 @@
+<div class='l-body'>
+  <div class='container'>
+	  <div class='row'>
+		  <div class='col-sm-4'></div>
+		  <div class='col-sm-4'>
+			<div class="text-center card login-card">
+				<form [formGroup]="loginForm" (ngSubmit)="doLogin()">
+					<div class="text-center">
+						<img src="assets/favicon.png" class="logo">
+					</div>
+					<input class="" type="email" formControlName="email" placeholder="Email">
+					<div class="warn"  *ngIf="loginForm.controls.email.invalid && (loginForm.controls.email.dirty || loginForm.controls.email.touched)">Please enter valid email address</div> 
+					<input class="" type="password" formControlName="password" placeholder="Password">
+					<div class="warn"  *ngIf="loginForm.controls.password.invalid && (loginForm.controls.password.dirty || loginForm.controls.password.touched)">Password must be at least 6 characters long, and contain a number</div> 
+					<br>
+					<button class="login-btn" type="submit" [disabled]="!loginForm.valid">Login <i class="w3-medium fa fa-check"></i> </button>
+				</form>
+				<div class="note">
+					<h4>Notes : </h4>
+					<p>Credentials : admin@gmail.com &amp; admin123</p>
+					<p>Admin login is not connected to database</p>
+				</div> 
+			</div>
+		  </div>
+		  <div class='col-sm-4'></div>
+	  </div>
+  </div>
+</div>
