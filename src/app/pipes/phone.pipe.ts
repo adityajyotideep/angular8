@@ -1,6 +1,4 @@
-/**
- * Created By : Sangwin Gawande (http://sangw.in)
- */
+
 
 import { Pipe, PipeTransform } from '@angular/core';
 
@@ -14,9 +12,5 @@ export class PhonePipe implements PipeTransform {
   }
 
 }
+// created by aditya
 
-/**
- * Created By : Sangwin Gawande (http://sangw.in)
- */
-
-//  master branch
